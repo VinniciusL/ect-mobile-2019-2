@@ -12,3 +12,5 @@ Além do Código Base (bit.do/projeto-mobile-ect) e utilizaremos também o FIREB
 - Inicialmente coloquei o código base fornecido no meu github e começarei a trabalhar em cima disso.
 
 Avanços do dia: Código inicial feito, começar a implementar as partes subsequentes.
+                Foi feito o firebase do projetofinal.ect, já coloquei o googleservices lá (colocar em andoird→app).
+                Para acessar o programa, inicialmente entrar no diretório do projeto, após dar npm install e depois o código react-native                 run-android --no-jetifier
