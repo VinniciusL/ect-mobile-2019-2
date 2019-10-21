@@ -15,3 +15,4 @@ Além do Código Base (bit.do/projeto-mobile-ect) e utilizaremos também o FIREB
                 Código inicial feito, começar a implementar as partes subsequentes;  
                 Foi feito o firebase do ProjetoFinal, já coloquei o googleservices lá (colocar em andoird→app);  
                 Para acessar o programa, inicialmente entrar no diretório do projeto, após dar yarn install e depois o código react-native run-android --no-jetifier;  
+                Inicialmente foram criadas a aba de Vendas e Dados, porém falta ser implementado no código em si as suas funções.
