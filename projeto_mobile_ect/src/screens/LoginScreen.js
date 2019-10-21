@@ -14,7 +14,7 @@ export default class PhoneAuthTest extends Component {
     this.state = {
       message: '',
       codeInput: '',
-      phoneNumber: '+55',
+      phoneNumber: '+55 ',
       confirmResult: null,
     };
   }
