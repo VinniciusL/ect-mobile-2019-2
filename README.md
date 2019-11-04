@@ -23,7 +23,6 @@ Além do Código Base (bit.do/projeto-mobile-ect) e utilizaremos também o FIREB
 ##### Avanços do dia: ###### 
     Funções que estão em pleno funcionamento: Tela de Login (OK); Tela de confirmação (OK); Cadastro dos Livros (Com Autor, Nome e Preço (OK));
     
-    Funções pela metade: Enviar o número do autor de venda/empréstimo (Falta fazer gerar o número automaticamente e após isso apenas cadastrar o nome, que ficará salvo, mas não será mostrado em qualquer lugar, apenas o número).
-    -- Utilizamos o this.props.navigation.navigate('MenuPrincipal', {phone: this.state.phoneNumber}), então pesquisar mais sobre. 
+    Funções pela metade: Finalizar a questão dos detalhes passados ao Firebase e retornando ao usuário.
    
     Funções faltando: Mostrar dados do usuário (Nome e Telefone); Acesso aos livros cadastrados (mostrar detalhes sobre eles); 
