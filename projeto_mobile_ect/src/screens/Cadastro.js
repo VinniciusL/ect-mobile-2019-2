@@ -8,7 +8,8 @@ export default class Home extends Component {
         super(props)
         this.state={
             titulo:'',
-            autor: ''
+            autor: '',
+            preco: ''
         }
         this.cadastrar = this.cadastrar.bind(this)
     }
@@ -19,7 +20,8 @@ export default class Home extends Component {
     cadastrar() {
         firestore().collection("livros").add({
             titulo: this.state.titulo,
-            autor: this.state.autor
+            autor: this.state.autor,
+            preco: this.state.preco
         })
         .then(()=>alert('Livro cadastrado com sucesso'))
         .catch(()=>alert('Erro ao cadastrar livro'))
@@ -43,8 +45,16 @@ export default class Home extends Component {
                     placeholder="Autor"
                     placeholderTextColor="#002f6c"
                     selectionColor="#fff"
-                    ref={(input) => this.autor = input}
-                />
+                    ref={(input) => this.autor = input} />
+
+                <TextInput style={styles.inputBox}
+                    onChangeText={(preco) => this.setState({ preco })}
+                    underlineColorAndroid='rgba(0,0,0,0)'
+                    placeholder="Preço em R$"
+                    placeholderTextColor="#002f6c"
+                    selectionColor="#fff"
+                    keyboardType={'numeric'}
+                    ref={(input) => this.preco = input} />
 
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText} onPress={this.cadastrar}>Cadastrar</Text>

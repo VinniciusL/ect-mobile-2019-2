@@ -22,7 +22,7 @@ export default class PhoneAuthTest extends Component {
   componentDidMount() {
     this.unsubscribe = auth().onAuthStateChanged((user) => {
       if (user) {
-        this.props.navigation.navigate('MenuPrincipal')
+        this.props.navigation.navigate('MenuPrincipal', {phone: this.state.phoneNumber})
       } else {
         // User has been signed out, reset the state
         this.ready = true
@@ -43,11 +43,11 @@ export default class PhoneAuthTest extends Component {
 
   signIn = () => {
     const { phoneNumber } = this.state;
-    this.setState({ message: 'Sending code ...' });
+    this.setState({ message: 'Enviando Código ...' });
 
     auth().signInWithPhoneNumber(phoneNumber)
-      .then(confirmResult => this.setState({ confirmResult, message: 'Code has been sent!' }))
-      .catch(error => this.setState({ message: `Sign In With Phone Number Error: ${error.message}` }));
+      .then(confirmResult => this.setState({ confirmResult, message: 'O Código foi enviado!' }))
+      .catch(error => this.setState({ message: `Insira o seu número de celular: ${error.message}` }));
   };
 
   confirmCode = () => {
@@ -56,9 +56,9 @@ export default class PhoneAuthTest extends Component {
     if (confirmResult && codeInput.length) {
       confirmResult.confirm(codeInput)
         .then((user) => {
-          this.setState({ message: 'Code Confirmed!' });
+          this.setState({ message: 'Código Confirmado!' });
         })
-        .catch(error => this.setState({ message: `Code Confirm Error: ${error.message}` }));
+        .catch(error => this.setState({ message: `Erro na Confirmação do Código: ${error.message}` }));
     }
   };
 

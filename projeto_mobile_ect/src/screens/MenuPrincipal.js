@@ -9,8 +9,8 @@ import Venda from './Venda'
 const drawerNavigation = createDrawerNavigator({
     Home,
     Cadastro,
-    MeusDados,
-    Venda
+    MeusDados
+    
 });
 
 export default createAppContainer(drawerNavigation);

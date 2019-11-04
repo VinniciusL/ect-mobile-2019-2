@@ -7,22 +7,21 @@ export default class Home extends Component {
     constructor(props) {
         super(props)
         this.state={
-            titulo:'',
-            autor: ''
+            nome: ''
         }
         this.cadastrar = this.cadastrar.bind(this)
     }
 
     componentDidMount() {
+        
     }
 
     cadastrar() {
         firestore().collection("livros").add({
-            titulo: this.state.titulo,
-            autor: this.state.autor
+            nome: this.state.nome
         })
-        .then(()=>alert('Livro cadastrado com sucesso'))
-        .catch(()=>alert('Erro ao cadastrar livro'))
+        .then(()=>alert('Nome cadastrado com sucesso'))
+        .catch(()=>alert('Erro ao cadastrar nome'))
             
     }
 
@@ -30,17 +29,15 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
                 <TextInput style={styles.inputBox}
-                    onChangeText={(titulo) => this.setState({ titulo })}
-                    underlineColorAndroid='rgba(0,0,0,0)'
-                    placeholder="Título"
+                    value={this.props.navigation.getParam('phone','+55 ')}
                     placeholderTextColor="#002f6c"
                     selectionColor="#fff"
-                    onSubmitEditing={() => this.autor.focus()} />
+                     />
 
                 <TextInput style={styles.inputBox}
-                    onChangeText={(autor) => this.setState({ autor })}
+                    onChangeText={(nome) => this.setState({ nome })}
                     underlineColorAndroid='rgba(0,0,0,0)'
-                    placeholder="Autor"
+                    placeholder="Nome"
                     placeholderTextColor="#002f6c"
                     selectionColor="#fff"
                     ref={(input) => this.autor = input}
