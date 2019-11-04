@@ -18,7 +18,12 @@ Além do Código Base (bit.do/projeto-mobile-ect) e utilizaremos também o FIREB
     Inicialmente foram criadas a aba de Vendas e Dados, porém falta ser implementado no código em si as suas funções.
                 
 #### → Dia 04/11 ←
-- 
+- Começando a implementação do código
 
 ##### Avanços do dia: ###### 
-                Alô
+    Funções que estão em pleno funcionamento: Tela de Login (OK); Tela de confirmação (OK); Cadastro dos Livros (Com Autor, Nome e Preço (OK));
+    
+    Funções pela metade: Enviar o número do autor de venda/empréstimo (Falta fazer gerar o número automaticamente e após isso apenas cadastrar o nome, que ficará salvo, mas não será mostrado em qualquer lugar, apenas o número).
+    -- Utilizamos o this.props.navigation.navigate('MenuPrincipal', {phone: this.state.phoneNumber}), então pesquisar mais sobre. 
+   
+    Funções faltando: Mostrar dados do usuário (Nome e Telefone); Acesso aos livros cadastrados (mostrar detalhes sobre eles); 
