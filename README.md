@@ -29,4 +29,6 @@ Além do Código Base (bit.do/projeto-mobile-ect) e utilizaremos também o FIREB
 - Finalizando o projeto e colocando monetização via INVERTASE/ADMOB
 
 ##### Avanços do dia: ###### 
-    Funçõe
+      Funções que estão em pleno funcionamento: Tela de Login (OK); Tela de confirmação (OK); Cadastro dos Livros (Com Autor, Nome e Preço (OK)); Finalizar a questão dos detalhes passados ao Firebase e retornando ao usuário.(OK)
+
+    Funções faltando: Colocar o (+); Acesso aos livros cadastrados (mostrar detalhes sobre eles); 
