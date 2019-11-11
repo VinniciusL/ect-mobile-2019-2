@@ -26,7 +26,7 @@ export default class Home extends Component {
             .then((querySnapshot) => {
                 let livros = []
                 querySnapshot.forEach((doc) => {
-                    livros.push({id: doc.id,...doc.data()})
+                    livros.push({ id: doc.id, ...doc.data() })
                 });
                 this.setState({ livros: livros })
             })
@@ -34,9 +34,11 @@ export default class Home extends Component {
 
     renderItem = ({ item }) => {
         return (
-            <Text style={styles.row}>
-                {item.titulo}
-            </Text>
+            <View style={styles.row}>
+                <Text style={{}}> Titulo: {item.titulo} </Text>
+                <Text> Autor: {item.autor}</Text>
+                <Text> Telefone Doador: </Text> 
+            </View>
         )
     }
 
@@ -60,8 +62,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     row: {
-        padding: 15,
-        marginBottom: 5,
-        backgroundColor: 'skyblue',
+        padding: 10,
+        marginBottom: 10,
+        backgroundColor: '#cce6ff',
+        elevation: 4
     },
 })
