@@ -7,6 +7,7 @@ Como base do projeto utilizaremos o código encontrado no github do professor (h
 
 Além do Código Base (bit.do/projeto-mobile-ect) e utilizaremos também o FIREBASE para a DataBase do projeto.
 
+Testando no NEXUS 5 API 23 - 1080 x 1920 - Android 6.0
 
 #### → Dia 21/10 ←
 - Inicialmente coloquei o código base fornecido no meu github e começarei a trabalhar em cima disso.
