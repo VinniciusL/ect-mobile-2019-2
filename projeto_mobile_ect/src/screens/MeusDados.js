@@ -9,15 +9,15 @@ export default class Home extends Component {
         this.state={
             nome: ''
         }
-        this.cadastrar = this.cadastrar.bind(this)
+        this.enviar = this.enviar.bind(this)
     }
 
     componentDidMount() {
         
     }
 
-    cadastrar() {
-        firestore().collection("livros").add({
+    enviar() {
+        firestore().collection("nome").add({
             nome: this.state.nome
         })
         .then(()=>alert('Nome cadastrado com sucesso'))
@@ -40,11 +40,11 @@ export default class Home extends Component {
                     placeholder="Nome"
                     placeholderTextColor="#002f6c"
                     selectionColor="#fff"
-                    ref={(input) => this.autor = input}
+                    ref={(input) => this.nome = input}
                 />
 
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText} onPress={this.cadastrar}>Cadastrar</Text>
+                    <Text style={styles.buttonText} onPress={this.enviar}>Enviar</Text>
                 </TouchableOpacity>
             </View>
 

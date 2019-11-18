@@ -4,12 +4,13 @@ import { createAppContainer } from 'react-navigation';
 import Home from './Home'
 import Cadastro from './Cadastro'
 import MeusDados from './MeusDados'
-import Venda from './Venda'
+import Page1 from './Page1'
 
 const drawerNavigation = createDrawerNavigator({
     Home,
     Cadastro,
-    MeusDados
+    MeusDados,
+    Page1
     
 });
 
