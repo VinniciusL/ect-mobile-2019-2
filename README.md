@@ -43,3 +43,12 @@ Testando no NEXUS 5 API 23 - 1080 x 1920 - Android 6.0
     Funções faltando: Colocar o (+); Acesso aos livros cadastrados (mostrar detalhes sobre eles);
     
     OBS* Aplicação do yarn navigation ('https://blog.rocketseat.com.br/react-navigation-react-native/') para utilizar no (+) junto a flexbox. 
+
+#### → Dia 21/11 ←
+- Projeto praticamente pronto.
+
+##### Avanços do dia: ###### 
+      Funções que estão em pleno funcionamento: Tela de Login (OK); Tela de confirmação (OK); Cadastro dos Livros (Com Autor, Nome e Preço (OK)); Finalizar a questão dos detalhes passados ao Firebase e retornando ao usuário.(OK) Colocar o [+](OK).
+
+    Funções faltando: ; Acesso aos livros cadastrados (mostrar detalhes sobre eles);
+    
