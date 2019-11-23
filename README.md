@@ -56,30 +56,30 @@ Testando no NEXUS 5 API 23 - 1080 x 1920 - Android 6.0
 # Alguns erros e como consertar.
 
 ### Caso o React-Native após abrir, feche instantaneamente.
-\node_modules\metro-config\src\defaults\blacklist.js
+    \node_modules\metro-config\src\defaults\blacklist.js    
+        
+    From:
+        
+    var sharedBlacklist = [
+    /node_modules[/\\]react[/\\]dist[/\\].*/,
+    /website\/node_modules\/.*/,
+    /heapCapture\/bundle\.js/,
+    /.*\/__tests__\/.*/
+    ];
 
-From:
+    To:
 
-var sharedBlacklist = [
-  /node_modules[/\\]react[/\\]dist[/\\].*/,
-  /website\/node_modules\/.*/,
-  /heapCapture\/bundle\.js/,
-  /.*\/__tests__\/.*/
-];
-
-To:
-
- var sharedBlacklist = [
-  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
-  /website\/node_modules\/.*/,
-  /heapCapture\/bundle\.js/,
-  /.*\/__tests__\/.*/
-];
+    var sharedBlacklist = [
+    /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+    /website\/node_modules\/.*/,
+    /heapCapture\/bundle\.js/,
+    /.*\/__tests__\/.*/
+    ];
 
 ### Erro do FailedTask
 
-cd ./android/app/
+    cd ./android/app/
 
-and then
+    and then
 
-keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
+    keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
